@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Codequotient Survey Form</h1>
+            <div class="thanks" >Thank you for taking the time to help us improve the platform</div>
+            <br>
+            <form>
+                <div>
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter your name" class="text-input">
+                </div>
+                <br>
+
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" class="text-input">
+                </div>
+                <br>
+                
+                <div>
+                    <label>Age (Optional)</label>
+                    <input type="number" placeholder="Age" maxlength="2" class="text-input">
+                </div>
+                <br>
+
+                <div>
+                    <label>Which option best describes your current role ?</label>
+                    <select name="role" class="text-input">
+                        <option value="Student">Student</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Full Time">Full Time</option>
+                    </select>
+                </div>
+                <br>
+
+                <div>
+                    <label>Would you recommend Codequotient to a Friend ?</label>
+                    <input class="input" type="radio" name="recommend">Definitely
+                    <br>
+                    <input class="input" type="radio" name="recommend">Maybe
+                    <br>
+                    <input class="input" type="radio" name="recommend">Nope
+                    <br>
+                </div>
+                <br>
+
+                <div>
+                    <label>In which courses you are interested</label>
+                    <input class="input" type="checkbox" name="courses">Data Structures
+                    <br>
+                    <input class="input" type="checkbox" name="courses">Cloud Computing
+                    <br>
+                    <input class="input" type="checkbox" name="courses">Machine Learning
+                </div>
+                <br>
+
+                <div>
+                    <label>Any comments or suggestions?</label>
+                    <textarea name="comments" rows="5" placeholder="Enter you comment here"></textarea>
+                </div>
+                <br>
+
+                <div>
+                    <input class="submit" type="Submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
