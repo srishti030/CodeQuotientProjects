@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+           
+            font-family: montserrat;
+        }
+        nav{
+            background:  rgb(30, 22, 58);
+            height: 80px;
+            width: 100%;
+        }
+        .logo > img{
+              margin: 10px;
+              margin-left: 20px;
+              width: 50px;
+              height: 60px;  
+        }
+        nav ul{
+            float: right;
+            margin-right: 20px;
+
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 10px;
+        }
+        nav ul li a{
+            color: white;
+            font-size: 17px;
+         
+        }
+
+         a:hover
+         {
+             color: orangered;
+             transition: .5s;
+         }
+        
+         .checkbtn{
+            height: 100%;
+            float: right;
+            width: 25px;
+            margin-top: 35px;
+            margin-right: 10px;
+         }
+        
+         #check{
+            
+             display: none;
+         }
+
+         @media (max-width: 620px)
+         {
+            nav{
+                background: rgb(31, 25, 51);
+            height: 80px;
+            width: 100%;
+        }
+            .logo > img{
+              margin: 10px;
+              margin-left: 20px;
+              width: 40px;
+              height: 50px;  
+        } 
+        .checkbtn
+        {
+    
+            display: block;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: rgb(31, 25, 51);
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+        }
+        nav ul li{
+            display: block;
+
+        }
+        nav ul li a {
+            font-size: 20px;
+        }
+        .hamburger{
+            height: 3px;
+            background: white;
+            
+            transition: all 0.3s;
+        }
+        .hamburger.middle, .hamburger.bottom
+        {
+            margin-top: 3px;
+        }
+       
+        #check:checked ~ ul{
+            left: 0;
+        }
+        #check:checked ~ .checkbtn > .hamburger.middle
+        {
+            opacity: 0;
+        }
+        #check:checked ~ .checkbtn > .hamburger.top
+        {
+            transform: rotate(135deg);
+            margin-top: 8px;
+        }
+        #check:checked ~ .checkbtn > .hamburger.bottom
+        {
+            transform: rotate(-135deg);
+            margin-top: -9px;
+        }
+
+         }
+         
+
+
+    </style>
+    <title>responsive</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <div class="hamburger top"></div>
+            <div class="hamburger middle"></div>
+            <div class="hamburger bottom"></div>
+        </label>
+        <label class="logo"><img src="logo.png" alt="logo"></label>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT US</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">FEEDBACK</a></li>
+        </ul>
+
+    </nav>
+</body>
+</html>
